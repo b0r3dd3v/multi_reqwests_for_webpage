@@ -9,11 +9,11 @@ fn main() {
         let mut input = String::new();
         io::stdin()
             .read_line(&mut input)
-            .expect("Reading input failed!");
+            .expect("2 red, mr bomd");
         let nr_threads = match input.trim().parse::<u32>() {
             Ok(rez) => rez,
             Err(error) => {
-                println!("Error = {}. Please input a valid number!", error);
+                println!("!enuf Numbers = {}. Moar!", error);
                 continue;
             }
         };
@@ -27,7 +27,7 @@ fn main() {
             url_address = match reqwest::Url::parse(&address) {
                 Ok(rez) => rez,
                 Err(error) => {
-                    println!("Error = {}. Please input a valid url! Example url: \"http://www.example.com\"",error);
+                    println!("Error = {}. Gimme valid URL! I need it 2 maintain my saltydev xistanz! U r so hot! And salty! Example url: \"https://devbulge.mangadex.com\"",error);
                     continue;
                 }
             };
@@ -35,15 +35,15 @@ fn main() {
         }
         let bool_req_opt_display;
         loop {
-            println!("Please specify if u want reqwest success info displayed. Press Y for Yes or N for No. To exit press Ctrl+C");
+            println!("Please specify if u want reqwest sussexxx info displayed. Press Y чтобы поссать в лифе or N чтобы выпросить пиздюлей от живцов. To exit press Ctrl+C.");
             let mut req_opt_display = String::new();
             io::stdin()
                 .read_line(&mut req_opt_display)
-                .expect("Reading display option failed!");
+                .expect("No display ffound! Press F1 for ICE emulation");
             if req_opt_display == "Y\r\n" || req_opt_display == "y\r\n" {bool_req_opt_display=true;}
             else if req_opt_display == "N\r\n" || req_opt_display == "n\r\n" {bool_req_opt_display=false;}
             else {
-                    println!("Please input a valid answer.");
+                    println!("Please input a valid answer, loud and clear!");
                     continue;
             }
             break;
@@ -62,11 +62,11 @@ fn main() {
                                 //println!("Status code: {}",response.status());
                                 //let text = response.text().expect("Coundn't retrieve text!");
                                 //println!("The text is : {}", text);
-                                if bool_req_opt_display==true {println!("Request nr. {}",nr);}
+                                if bool_req_opt_display==true {println!("Request mr. {}",nr);}
                                 ReqwestResult::OK
                             },
                             _ => {
-                                if bool_req_opt_display==true {println!(" The status code was not OK!");}
+                                if bool_req_opt_display==true {println!(" The scripts are not OK!");}
                                 ReqwestResult::NOK
                                 }
                         }
@@ -86,7 +86,7 @@ fn main() {
             }
         }
         let duration=starting_time.elapsed();
-        println!("Reqwests results are : Result was 200 (OK) = {}, Result was not 200 (NOK) = {}, Reqwesting errors = {}. Total reqwests processing duration = {:?}",results.0, results.1, results.2, duration);
+        println!("Reqwests results are : Result was 200 (OK) = {}, Result was not 200 (NOK) = {}, Reqwesting wors = {}. Total reqwests processing duration = {:?}",results.0, results.1, results.2, duration);
         }).expect("The scope didn't join threads without panicking!");
     }
 }
