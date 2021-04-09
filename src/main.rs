@@ -87,7 +87,7 @@ fn main() {
         }
         let duration=starting_time.elapsed();
         println!("Reqwests results are : Result was 200 (OK) = {}, Result was not 200 (NOK) = {}, Reqwesting wors = {}. Total reqwests processing duration = {:?}",results.0, results.1, results.2, duration);
-        }).expect("The scope didn't join threads without panicking!");
+        }).expect("In Soviet .ru, TIs scope agents");
     }
 }
 
